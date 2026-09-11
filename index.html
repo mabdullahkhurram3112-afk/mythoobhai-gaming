@@ -1,0 +1,655 @@
+```html
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary Google SEO Meta Tags -->
+    <title>Mythoo Bhai - Official Gaming Channel & Live Streams</title>
+    <meta name="title" content="Mythoo Bhai - Official Gaming Channel & Live Streams">
+    <meta name="description" content="Welcome to the official website of Mythoo Bhai! Watch live PUBG Mobile/BGMI, Valorant, GTA V RP streams, clutch montages, setup photos, and join the Mythoo Army squad!">
+    <meta name="keywords" content="Mythoo Bhai, Mythoo Bhai gaming, Mythoo Bhai live, BGMI live, Valorant montage, GTA RP, gaming channel, Mythoo squad">
+    <meta name="author" content="Mythoo Bhai">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook / Discord Link Preview Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mythoobhai.github.io/">
+    <meta property="og:title" content="Mythoo Bhai - Official Gaming Channel & Live Streams">
+    <meta property="og:description" content="Dominated lobbies, clutch headshots, high-octane gaming montages & non-stop entertainment with Mythoo Bhai!">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1542751371-adc38448a05e?fit=crop&w=1200&q=80">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://mythoobhai.github.io/">
+    <meta property="twitter:title" content="Mythoo Bhai - Official Gaming Channel & Live Streams">
+    <meta property="twitter:description" content="Dominated lobbies, clutch headshots, high-octane gaming montages & non-stop entertainment with Mythoo Bhai!">
+    <meta property="twitter:image" content="https://images.unsplash.com/photo-1542751371-adc38448a05e?fit=crop&w=1200&q=80">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        neonCyan: '#00f3ff',
+                        neonMagenta: '#ff007f',
+                        neonPurple: '#a855f7',
+                        neonGreen: '#39ff14',
+                        darkBg: '#08090f',
+                        darkCard: '#11131f',
+                        darkCardHover: '#181b2c'
+                    },
+                    fontFamily: {
+                        orbitron: ['Orbitron', 'sans-serif'],
+                        rajdhani: ['Rajdhani', 'sans-serif'],
+                        inter: ['Inter', 'sans-serif']
+                    },
+                    boxShadow: {
+                        'neon-cyan': '0 0 15px rgba(0, 243, 255, 0.5), 0 0 30px rgba(0, 243, 255, 0.2)',
+                        'neon-magenta': '0 0 15px rgba(255, 0, 127, 0.5), 0 0 30px rgba(255, 0, 127, 0.2)',
+                        'neon-purple': '0 0 15px rgba(168, 85, 247, 0.5), 0 0 30px rgba(168, 85, 247, 0.2)',
+                        'neon-green': '0 0 15px rgba(57, 255, 20, 0.5), 0 0 30px rgba(57, 255, 20, 0.2)'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts & FontAwesome Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800;900&family=Rajdhani:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body {
+            background-color: #08090f;
+            color: #f3f4f6;
+            font-family: 'Rajdhani', 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Glowing text accents */
+        .text-neon-cyan { color: #00f3ff; text-shadow: 0 0 12px rgba(0, 243, 255, 0.7); }
+        .text-neon-magenta { color: #ff007f; text-shadow: 0 0 12px rgba(255, 0, 127, 0.7); }
+        .text-neon-green { color: #39ff14; text-shadow: 0 0 12px rgba(57, 255, 20, 0.7); }
+        .text-neon-purple { color: #a855f7; text-shadow: 0 0 12px rgba(168, 85, 247, 0.7); }
+
+        /* Grid pattern background overlay */
+        .bg-grid-pattern {
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 35px 35px;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #08090f; }
+        ::-webkit-scrollbar-thumb { background: #181b2c; border-radius: 4px; border: 1px solid #00f3ff; }
+        ::-webkit-scrollbar-thumb:hover { background: #00f3ff; }
+
+        /* Scanline CRT FX */
+        .scanlines {
+            position: relative;
+            overflow: hidden;
+        }
+        .scanlines::before {
+            content: " ";
+            display: block;
+            position: absolute;
+            top: 0; left: 0; bottom: 0; right: 0;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.3) 50%);
+            background-size: 100% 4px;
+            z-index: 2;
+            pointer-events: none;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body class="bg-darkBg min-h-screen bg-grid-pattern selection:bg-neonMagenta selection:text-white pb-10">
+
+    <!-- Sticky Top Navigation -->
+    <nav class="sticky top-0 z-40 bg-darkBg/90 backdrop-blur-md border-b border-gray-800/80 px-6 py-4">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <!-- Channel Logo -->
+            <a href="#hero" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-neonCyan via-neonPurple to-neonMagenta p-0.5 shadow-neon-cyan">
+                    <div class="w-full h-full bg-darkBg rounded-[7px] flex items-center justify-center">
+                        <i class="fas fa-gamepad text-neonCyan text-lg group-hover:rotate-12 transition-transform"></i>
+                    </div>
+                </div>
+                <span class="font-orbitron font-black text-2xl tracking-wider text-white">
+                    MYTHOO <span class="text-neonCyan">BHAI</span>
+                </span>
+            </a>
+
+            <!-- Desktop Links -->
+            <div class="hidden md:flex items-center space-x-8 font-rajdhani font-semibold text-lg">
+                <a href="#videos" class="hover:text-neonCyan transition-colors">Videos</a>
+                <a href="#gallery" class="hover:text-neonCyan transition-colors">Photos</a>
+                <a href="#schedule" class="hover:text-neonCyan transition-colors">Schedule</a>
+                <a href="#specs" class="hover:text-neonCyan transition-colors">PC Setup</a>
+                <a href="#community" class="hover:text-neonCyan transition-colors">Squad</a>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="flex items-center gap-3">
+                <button onclick="openUploadModal()" class="px-3.5 py-2 rounded-xl text-xs font-orbitron font-bold text-neonGreen bg-darkCard border border-neonGreen/40 hover:bg-neonGreen hover:text-black shadow-neon-green transition-all flex items-center gap-2">
+                    <i class="fas fa-plus-circle"></i> Add Media
+                </button>
+                <a href="https://youtube.com" target="_blank" class="hidden sm:flex items-center gap-2 px-5 py-2 rounded-xl font-orbitron font-bold text-xs uppercase tracking-wider text-white bg-red-600 hover:bg-red-700 shadow-lg shadow-red-600/30 transition-all hover:scale-105">
+                    <i class="fab fa-youtube text-base"></i> Subscribe
+                </a>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white text-2xl focus:outline-none">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden mt-4 pt-4 border-t border-gray-800/80 flex flex-col space-y-3 font-rajdhani font-semibold text-lg text-center">
+            <a href="#videos" onclick="toggleMobileMenu()" class="hover:text-neonCyan transition-colors">Videos</a>
+            <a href="#gallery" onclick="toggleMobileMenu()" class="hover:text-neonCyan transition-colors">Photos</a>
+            <a href="#schedule" onclick="toggleMobileMenu()" class="hover:text-neonCyan transition-colors">Schedule</a>
+            <a href="#specs" onclick="toggleMobileMenu()" class="hover:text-neonCyan transition-colors">PC Setup</a>
+            <a href="#community" onclick="toggleMobileMenu()" class="hover:text-neonCyan transition-colors">Squad</a>
+        </div>
+    </nav>
+
+    <!-- Hero Banner Section -->
+    <header id="hero" class="relative pt-12 pb-16 px-6 max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12 overflow-hidden">
+        <!-- Ambient Glowing Lights -->
+        <div class="absolute top-10 left-1/4 w-96 h-96 bg-neonCyan/10 rounded-full blur-[140px] pointer-events-none"></div>
+        <div class="absolute bottom-10 right-10 w-96 h-96 bg-neonMagenta/10 rounded-full blur-[140px] pointer-events-none"></div>
+
+        <!-- Left Hero Slogan -->
+        <div class="flex-1 space-y-6 text-center lg:text-left z-10">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-darkCard border border-neonCyan/40 shadow-neon-cyan text-xs font-orbitron font-bold text-neonCyan">
+                <span class="w-2.5 h-2.5 rounded-full bg-neonGreen animate-ping"></span>
+                OFFICIAL GAMING HUB & STREAMS
+            </div>
+
+            <h1 class="font-orbitron font-black text-4xl sm:text-6xl lg:text-7xl uppercase tracking-tight leading-none text-white">
+                WELCOME TO <br>
+                <span class="text-neon-cyan">MYTHOO</span> <span class="text-neon-magenta">BHAI</span>
+            </h1>
+
+            <p class="font-rajdhani text-gray-300 text-xl sm:text-2xl font-medium max-w-xl mx-auto lg:mx-0">
+                Dominated lobbies, clutch headshots, high-octane gaming montages & non-stop live stream entertainment! 🔥
+            </p>
+
+            <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
+                <a href="#video-player-section" onclick="playFeaturedVideo()" class="px-8 py-4 rounded-xl font-orbitron font-bold text-sm uppercase tracking-wider text-black bg-neonCyan hover:bg-white shadow-neon-cyan transition-all hover:scale-105 flex items-center gap-3">
+                    <i class="fas fa-play text-base"></i> Watch Stream
+                </a>
+                <a href="https://discord.com" target="_blank" class="px-8 py-4 rounded-xl font-orbitron font-bold text-sm uppercase tracking-wider text-white bg-darkCard border border-neonMagenta hover:bg-neonMagenta/20 shadow-neon-magenta transition-all hover:scale-105 flex items-center gap-3">
+                    <i class="fab fa-discord text-lg"></i> Join Discord
+                </a>
+            </div>
+
+            <!-- Social Links -->
+            <div class="flex items-center justify-center lg:justify-start space-x-6 pt-4 text-2xl text-gray-400">
+                <a href="https://youtube.com" target="_blank" class="hover:text-red-500 transition-colors"><i class="fab fa-youtube"></i></a>
+                <a href="https://discord.com" target="_blank" class="hover:text-indigo-400 transition-colors"><i class="fab fa-discord"></i></a>
+                <a href="https://instagram.com" target="_blank" class="hover:text-pink-500 transition-colors"><i class="fab fa-instagram"></i></a>
+                <a href="https://twitch.tv" target="_blank" class="hover:text-purple-400 transition-colors"><i class="fab fa-twitch"></i></a>
+            </div>
+        </div>
+
+        <!-- Right Hero Preview Box -->
+        <div class="flex-1 w-full max-w-lg z-10">
+            <div class="relative group rounded-2xl p-1 bg-gradient-to-r from-neonCyan via-neonPurple to-neonMagenta shadow-2xl">
+                <div class="bg-darkCard rounded-xl overflow-hidden scanlines border border-gray-800">
+                    <div class="relative aspect-video">
+                        <img id="hero-thumbnail" src="https://images.unsplash.com/photo-1542751371-adc38448a05e?fit=crop&w=1000&q=80" alt="Mythoo Bhai Gameplay Preview" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+                            <button onclick="playFeaturedVideo()" class="w-16 h-16 rounded-full bg-neonMagenta text-white flex items-center justify-center shadow-neon-magenta group-hover:scale-110 transition-transform">
+                                <i class="fas fa-play text-2xl ml-1"></i>
+                            </button>
+                        </div>
+                        <span class="absolute top-3 left-3 bg-red-600 text-white font-orbitron text-xs font-bold px-3 py-1 rounded shadow">LIVE NOW</span>
+                    </div>
+                    <div class="p-5 space-y-1">
+                        <h3 class="font-orbitron font-bold text-lg text-white">BGMI / PUBG 1v4 Clutch GOD Mode Gameplay! 💥</h3>
+                        <p class="font-rajdhani text-gray-400 text-sm">Mythoo Bhai • 15.2K Viewers Watching</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Live Stream Countdown Banner -->
+    <section class="max-w-7xl mx-auto px-6 mb-12">
+        <div class="bg-gradient-to-r from-darkCard via-darkCardHover to-darkCard p-6 rounded-2xl border border-neonCyan/40 shadow-neon-cyan flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-4 text-center md:text-left">
+                <div class="w-12 h-12 rounded-xl bg-neonGreen/10 border border-neonGreen flex items-center justify-center text-neonGreen text-2xl shrink-0">
+                    <i class="fas fa-broadcast-tower"></i>
+                </div>
+                <div>
+                    <h3 class="font-orbitron font-bold text-lg text-white">NEXT LIVE STREAM COUNTDOWN</h3>
+                    <p class="font-rajdhani text-gray-400 text-sm">Mythoo Bhai will go live on YouTube with BGMI Custom Rooms!</p>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-3 font-orbitron font-black text-xl text-neonCyan bg-darkBg px-6 py-3 rounded-xl border border-gray-800">
+                <div class="text-center"><span id="cd-hours">02</span><span class="block text-[9px] font-rajdhani font-semibold text-gray-400">HOURS</span></div>
+                <span>:</span>
+                <div class="text-center"><span id="cd-mins">45</span><span class="block text-[9px] font-rajdhani font-semibold text-gray-400">MINUTES</span></div>
+                <span>:</span>
+                <div class="text-center"><span id="cd-secs">30</span><span class="block text-[9px] font-rajdhani font-semibold text-gray-400">SECONDS</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Channel Stats Counter -->
+    <section class="py-10 bg-darkCard/80 border-y border-gray-800/80 mb-16">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div class="space-y-1">
+                <p class="font-orbitron text-3xl sm:text-4xl font-extrabold text-neonCyan">500K+</p>
+                <p class="font-rajdhani text-gray-400 font-semibold uppercase text-sm tracking-wider">Subscribers</p>
+            </div>
+            <div class="space-y-1">
+                <p class="font-orbitron text-3xl sm:text-4xl font-extrabold text-neonMagenta">30M+</p>
+                <p class="font-rajdhani text-gray-400 font-semibold uppercase text-sm tracking-wider">Total Views</p>
+            </div>
+            <div class="space-y-1">
+                <p class="font-orbitron text-3xl sm:text-4xl font-extrabold text-neonGreen">1,850</p>
+                <p class="font-rajdhani text-gray-400 font-semibold uppercase text-sm tracking-wider">Chicken Dinners</p>
+            </div>
+            <div class="space-y-1">
+                <p class="font-orbitron text-3xl sm:text-4xl font-extrabold text-neonPurple">920+</p>
+                <p class="font-rajdhani text-gray-400 font-semibold uppercase text-sm tracking-wider">Live Streams</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 1: Interactive Video Gallery -->
+    <main class="max-w-7xl mx-auto px-6 space-y-16">
+
+        <section id="videos" class="space-y-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-gray-800 pb-4">
+                <div>
+                    <h2 class="font-orbitron text-3xl sm:text-4xl font-black uppercase tracking-wide text-white">
+                        LATEST <span class="text-neonCyan">VIDEOS</span> & <span class="text-neonMagenta">STREAMS</span>
+                    </h2>
+                    <p class="font-rajdhani text-gray-400 text-base">Watch recent montages, live stream recordings, and YouTube shorts.</p>
+                </div>
+
+                <!-- Video Category Filters -->
+                <div class="flex flex-wrap gap-2" id="video-filter-container">
+                    <button onclick="filterVideos('all')" class="v-filter-btn px-4 py-2 rounded-xl font-orbitron text-xs font-bold bg-neonCyan text-black shadow-neon-cyan">ALL</button>
+                    <button onclick="filterVideos('live')" class="v-filter-btn px-4 py-2 rounded-xl font-orbitron text-xs font-bold bg-darkCard text-gray-300 hover:text-neonCyan border border-gray-800">LIVE</button>
+                    <button onclick="filterVideos('montage')" class="v-filter-btn px-4 py-2 rounded-xl font-orbitron text-xs font-bold bg-darkCard text-gray-300 hover:text-neonCyan border border-gray-800">MONTAGES</button>
+                    <button onclick="filterVideos('shorts')" class="v-filter-btn px-4 py-2 rounded-xl font-orbitron text-xs font-bold bg-darkCard text-gray-300 hover:text-neonCyan border border-gray-800">SHORTS</button>
+                </div>
+            </div>
+
+            <!-- Active Video Player Area -->
+            <div id="video-player-section" class="hidden bg-darkCard p-4 sm:p-6 rounded-2xl border border-neonCyan shadow-neon-cyan">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 id="active-video-title" class="font-orbitron font-bold text-xl text-white">Video Title</h3>
+                    <button onclick="closeVideoPlayer()" class="text-gray-400 hover:text-white text-xl p-2"><i class="fas fa-times"></i></button>
+                </div>
+                <div class="aspect-video w-full rounded-xl overflow-hidden bg-black">
+                    <iframe id="video-iframe" class="w-full h-full" src="" title="Mythoo Bhai Video Player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <!-- Video Cards Grid -->
+            <div id="videos-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Injected dynamically via JS -->
+            </div>
+        </section>
+
+        <!-- SECTION 2: Photo Lightbox Gallery -->
+        <section id="gallery" class="space-y-8">
+            <div class="border-b border-gray-800 pb-4">
+                <h2 class="font-orbitron text-3xl sm:text-4xl font-black uppercase tracking-wide text-white">
+                    PHOTO & <span class="text-neonMagenta">SETUP</span> GALLERY
+                </h2>
+                <p class="font-rajdhani text-gray-400 text-base">Gaming setup, tournament photos, squad photos, and fan art.</p>
+            </div>
+
+            <div id="gallery-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Injected dynamically via JS -->
+            </div>
+        </section>
+
+        <!-- SECTION 3: Stream Schedule & Gaming Specs -->
+        <section id="schedule" class="grid lg:grid-cols-2 gap-8">
+            <!-- Streaming Timetable -->
+            <div class="bg-darkCard p-6 sm:p-8 rounded-2xl border border-gray-800 space-y-6">
+                <div class="flex items-center gap-3 border-b border-gray-800 pb-4">
+                    <i class="fas fa-calendar-alt text-2xl text-neonGreen"></i>
+                    <h2 class="font-orbitron font-bold text-2xl text-white">STREAM SCHEDULE</h2>
+                </div>
+
+                <div class="space-y-4 font-rajdhani">
+                    <div class="bg-darkBg p-4 rounded-xl border border-gray-800 flex items-center justify-between">
+                        <div>
+                            <span class="font-orbitron text-xs font-bold text-neonCyan bg-neonCyan/10 px-2.5 py-0.5 rounded border border-neonCyan/30">MON - WED</span>
+                            <h3 class="font-bold text-lg text-white mt-1">PUBG / BGMI Rank Push</h3>
+                        </div>
+                        <span class="text-sm font-semibold text-gray-400">8:00 PM EST</span>
+                    </div>
+
+                    <div class="bg-darkBg p-4 rounded-xl border border-gray-800 flex items-center justify-between">
+                        <div>
+                            <span class="font-orbitron text-xs font-bold text-neonMagenta bg-neonMagenta/10 px-2.5 py-0.5 rounded border border-neonMagenta/30">THU - FRI</span>
+                            <h3 class="font-bold text-lg text-white mt-1">Valorant & GTA 5 RP</h3>
+                        </div>
+                        <span class="text-sm font-semibold text-gray-400">9:00 PM EST</span>
+                    </div>
+
+                    <div class="bg-darkBg p-4 rounded-xl border border-gray-800 flex items-center justify-between">
+                        <div>
+                            <span class="font-orbitron text-xs font-bold text-neonPurple bg-neonPurple/10 px-2.5 py-0.5 rounded border border-neonPurple/30">SAT - SUN</span>
+                            <h3 class="font-bold text-lg text-white mt-1">Fan Tournament & Custom Rooms</h3>
+                        </div>
+                        <span class="text-sm font-semibold text-gray-400">7:00 PM EST</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gaming PC Specs -->
+            <div id="specs" class="bg-darkCard p-6 sm:p-8 rounded-2xl border border-gray-800 space-y-6">
+                <div class="flex items-center gap-3 border-b border-gray-800 pb-4">
+                    <i class="fas fa-desktop text-2xl text-neonCyan"></i>
+                    <h2 class="font-orbitron font-bold text-2xl text-white">MYTHOO PC SPECS</h2>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4 font-rajdhani text-sm">
+                    <div class="bg-darkBg p-3.5 rounded-xl border border-gray-800">
+                        <span class="text-xs text-neonCyan font-orbitron font-bold block">PROCESSOR</span>
+                        <span class="text-white font-bold text-base">Intel Core i9-14900K</span>
+                    </div>
+                    <div class="bg-darkBg p-3.5 rounded-xl border border-gray-800">
+                        <span class="text-xs text-neonMagenta font-orbitron font-bold block">GRAPHICS CARD</span>
+                        <span class="text-white font-bold text-base">NVIDIA RTX 4090 24GB</span>
+                    </div>
+                    <div class="bg-darkBg p-3.5 rounded-xl border border-gray-800">
+                        <span class="text-xs text-neonGreen font-orbitron font-bold block">RAM</span>
+                        <span class="text-white font-bold text-base">64GB DDR5 6000MHz</span>
+                    </div>
+                    <div class="bg-darkBg p-3.5 rounded-xl border border-gray-800">
+                        <span class="text-xs text-neonPurple font-orbitron font-bold block">MONITOR</span>
+                        <span class="text-white font-bold text-base">240Hz OLED Gaming Display</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: Community & Fan Message Form -->
+        <section id="community" class="bg-darkCard p-8 rounded-2xl border border-gray-800 space-y-6">
+            <div class="text-center max-w-xl mx-auto space-y-2">
+                <h2 class="font-orbitron text-3xl font-black text-white">JOIN THE MYTHOO ARMY</h2>
+                <p class="font-rajdhani text-gray-400 text-base">Send a direct fan message or join our community server!</p>
+            </div>
+
+            <form id="fan-form" class="max-w-xl mx-auto space-y-4 font-rajdhani">
+                <div class="grid sm:grid-cols-2 gap-4">
+                    <input type="text" id="fan-name" required placeholder="Your Gamer Tag / Name" class="bg-darkBg border border-gray-700 rounded-xl p-3 text-white text-sm focus:border-neonCyan outline-none w-full">
+                    <input type="email" id="fan-email" required placeholder="Your Email Address" class="bg-darkBg border border-gray-700 rounded-xl p-3 text-white text-sm focus:border-neonCyan outline-none w-full">
+                </div>
+                <textarea id="fan-message" rows="3" required placeholder="Leave Mythoo Bhai a message..." class="bg-darkBg border border-gray-700 rounded-xl p-3 text-white text-sm focus:border-neonCyan outline-none w-full"></textarea>
+                <button type="submit" class="w-full py-3.5 rounded-xl font-orbitron font-bold text-black bg-neonCyan hover:bg-white shadow-neon-cyan transition-all uppercase tracking-wider">
+                    SEND MESSAGE
+                </button>
+            </form>
+            <div id="fan-msg-alert" class="hidden max-w-xl mx-auto p-3 rounded-xl bg-neonGreen/10 border border-neonGreen text-neonGreen text-center text-sm font-orbitron">
+                🔥 Thanks for your message! Mythoo Bhai will read it on stream!
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox-modal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden flex items-center justify-center p-4">
+        <button onclick="closeLightbox()" class="absolute top-6 right-6 text-gray-300 hover:text-neonCyan text-3xl"><i class="fas fa-times"></i></button>
+        <div class="max-w-4xl w-full space-y-3">
+            <img id="lightbox-img" src="" alt="Full Resolution View" class="w-full max-h-[80vh] object-contain rounded-xl border border-neonMagenta shadow-neon-magenta">
+            <p id="lightbox-caption" class="text-center font-orbitron font-bold text-base text-white">Photo Title</p>
+        </div>
+    </div>
+
+    <!-- Media Uploader Modal (Saves to LocalStorage) -->
+    <div id="upload-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden flex items-center justify-center p-4">
+        <div class="bg-darkCard border border-neonCyan shadow-neon-cyan max-w-lg w-full p-6 rounded-2xl space-y-5">
+            <div class="flex justify-between items-center border-b border-gray-800 pb-3">
+                <h3 class="font-orbitron font-bold text-xl text-neonCyan">Add Content to Website</h3>
+                <button onclick="closeUploadModal()" class="text-gray-400 hover:text-white text-xl"><i class="fas fa-times"></i></button>
+            </div>
+
+            <form id="media-form" class="space-y-4 font-rajdhani">
+                <div>
+                    <label class="block text-sm font-bold text-gray-300 mb-1">Content Type</label>
+                    <select id="media-type" class="w-full bg-darkBg border border-gray-700 rounded-xl p-3 text-white focus:border-neonCyan outline-none">
+                        <option value="video">Video Highlight</option>
+                        <option value="photo">Photo Gallery</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-bold text-gray-300 mb-1">Title / Caption</label>
+                    <input type="text" id="media-title" required placeholder="e.g. Insane 1v4 BGMI Clutch" class="w-full bg-darkBg border border-gray-700 rounded-xl p-3 text-white focus:border-neonCyan outline-none">
+                </div>
+
+                <div>
+                    <label class="block text-sm font-bold text-gray-300 mb-1">Image / Thumbnail URL</label>
+                    <input type="url" id="media-url" required placeholder="https://images.unsplash.com/..." class="w-full bg-darkBg border border-gray-700 rounded-xl p-3 text-white focus:border-neonCyan outline-none">
+                </div>
+
+                <div>
+                    <label class="block text-sm font-bold text-gray-300 mb-1">YouTube Video ID (Optional for Videos)</label>
+                    <input type="text" id="media-embed" placeholder="e.g. dQw4w9WgXcQ" class="w-full bg-darkBg border border-gray-700 rounded-xl p-3 text-white focus:border-neonCyan outline-none">
+                </div>
+
+                <div>
+                    <label class="block text-sm font-bold text-gray-300 mb-1">Category</label>
+                    <select id="media-category" class="w-full bg-darkBg border border-gray-700 rounded-xl p-3 text-white focus:border-neonCyan outline-none">
+                        <option value="montage">Montage</option>
+                        <option value="live">Live Stream</option>
+                        <option value="shorts">Shorts</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="w-full py-3.5 rounded-xl font-orbitron font-bold text-black bg-neonCyan hover:bg-white shadow-neon-cyan transition-all">
+                    SAVE TO WEBSITE
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Interactive Application Logic -->
+    <script>
+        // Initial Sample Data
+        const defaultVideos = [
+            {
+                id: 1,
+                title: "BGMI 1v4 Clutch vs Pro Tournament Squad!",
+                category: "montage",
+                views: "185K views",
+                date: "2 days ago",
+                thumbnail: "https://images.unsplash.com/photo-1542751371-adc38448a05e?fit=crop&w=800&q=80",
+                embedId: "dQw4w9WgXcQ"
+            },
+            {
+                id: 2,
+                title: "Valorant Radiant Ace with Jett 🎯",
+                category: "montage",
+                views: "94K views",
+                date: "5 days ago",
+                thumbnail: "https://images.unsplash.com/photo-1538481199705-c710c4e965fc?fit=crop&w=800&q=80",
+                embedId: "dQw4w9WgXcQ"
+            },
+            {
+                id: 3,
+                title: "12 Hours NON-STOP GTA V RP Live Stream!",
+                category: "live",
+                views: "310K views",
+                date: "1 week ago",
+                thumbnail: "https://images.unsplash.com/photo-1511512578047-dfb367046420?fit=crop&w=800&q=80",
+                embedId: "dQw4w9WgXcQ"
+            },
+            {
+                id: 4,
+                title: "FASTEST AWM FLICK IN FREE FIRE 🔥 #Shorts",
+                category: "shorts",
+                views: "520K views",
+                date: "2 weeks ago",
+                thumbnail: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?fit=crop&w=800&q=80",
+                embedId: "dQw4w9WgXcQ"
+            }
+        ];
+
+        const defaultPhotos = [
+            { id: 1, title: "Mythoo Bhai RGB Setup", url: "https://images.unsplash.com/photo-1598550476439-6847785fcea6?fit=crop&w=800&q=80" },
+            { id: 2, title: "LAN Tournament Trophy Victory", url: "https://images.unsplash.com/photo-1511512578047-dfb367046420?fit=crop&w=800&q=80" },
+            { id: 3, title: "Custom Mechanical Keyboard Setup", url: "https://images.unsplash.com/photo-1587829741301-dc798b83add3?fit=crop&w=800&q=80" }
+        ];
+
+        // Load saved state or default
+        let videos = JSON.parse(localStorage.getItem('mythoobhai_videos')) || defaultVideos;
+        let photos = JSON.parse(localStorage.getItem('mythoobhai_photos')) || defaultPhotos;
+
+        // Render Videos
+        function renderVideos(filter = 'all') {
+            const grid = document.getElementById('videos-grid');
+            grid.innerHTML = '';
+
+            const filtered = filter === 'all' ? videos : videos.filter(v => v.category === filter);
+
+            filtered.forEach(video => {
+                const card = document.createElement('div');
+                card.className = "bg-darkCard rounded-2xl overflow-hidden border border-gray-800 hover:border-neonCyan transition-all flex flex-col justify-between group";
+                card.innerHTML = `
+                    <div class="relative aspect-video overflow-hidden bg-gray-900 cursor-pointer" onclick="openVideoPlayer('${video.title}', '${video.embedId}')">
+                        <img src="${video.thumbnail}" alt="${video.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x400/11131f/00f3ff?text=Mythoo+Bhai'">
+                        <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors flex items-center justify-center">
+                            <div class="w-12 h-12 rounded-full bg-neonCyan text-black flex items-center justify-center shadow-neon-cyan group-hover:scale-110 transition-transform">
+                                <i class="fas fa-play ml-1"></i>
+                            </div>
+                        </div>
+                        <span class="absolute bottom-2 right-2 bg-black/80 text-neonCyan font-orbitron text-[10px] font-bold px-2 py-0.5 rounded border border-neonCyan/40 uppercase">${video.category}</span>
+                    </div>
+                    <div class="p-5 space-y-3">
+                        <h3 class="font-orbitron font-bold text-base text-white line-clamp-2 hover:text-neonCyan transition-colors cursor-pointer" onclick="openVideoPlayer('${video.title}', '${video.embedId}')">${video.title}</h3>
+                        <div class="flex items-center justify-between font-rajdhani text-xs text-gray-400">
+                            <span><i class="fas fa-eye text-neonCyan mr-1"></i> ${video.views || '10K views'}</span>
+                            <span><i class="fas fa-clock text-gray-500 mr-1"></i> ${video.date || 'Recent'}</span>
+                        </div>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        // Render Photos
+        function renderGallery() {
+            const grid = document.getElementById('gallery-grid');
+            grid.innerHTML = '';
+
+            photos.forEach(photo => {
+                const card = document.createElement('div');
+                card.className = "relative aspect-square rounded-2xl overflow-hidden border border-gray-800 hover:border-neonMagenta cursor-pointer group";
+                card.onclick = () => openLightbox(photo.url, photo.title);
+                card.innerHTML = `
+                    <img src="${photo.url}" alt="${photo.title}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" onerror="this.src='https://placehold.co/600x600/11131f/ff007f?text=Mythoo+Gallery'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end">
+                        <p class="font-orbitron font-bold text-sm text-white">${photo.title}</p>
+                        <span class="font-rajdhani text-xs text-neonMagenta flex items-center gap-1"><i class="fas fa-search-plus"></i> View Full Photo</span>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        // Filter Video Category Handler
+        function filterVideos(category) {
+            document.querySelectorAll('.v-filter-btn').forEach(btn => {
+                btn.className = "v-filter-btn px-4 py-2 rounded-xl font-orbitron text-xs font-bold bg-darkCard text-gray-300 hover:text-neonCyan border border-gray-800";
+            });
+            event.target.className = "v-filter-btn px-4 py-2 rounded-xl font-orbitron text-xs font-bold bg-neonCyan text-black shadow-neon-cyan";
+            renderVideos(category);
+        }
+
+        // Video Player Modal logic
+        function openVideoPlayer(title, embedId) {
+            const playerSec = document.getElementById('video-player-section');
+            document.getElementById('active-video-title').textContent = title;
+            document.getElementById('video-iframe').src = `https://www.youtube.com/embed/${embedId}?autoplay=1`;
+            playerSec.classList.remove('hidden');
+            playerSec.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function playFeaturedVideo() {
+            openVideoPlayer("BGMI / PUBG 1v4 Clutch GOD Mode Gameplay!", "dQw4w9WgXcQ");
+        }
+
+        function closeVideoPlayer() {
+            document.getElementById('video-iframe').src = "";
+            document.getElementById('video-player-section').classList.add('hidden');
+        }
+
+        // Lightbox logic
+        function openLightbox(url, title) {
+            document.getElementById('lightbox-img').src = url;
+            document.getElementById('lightbox-caption').textContent = title;
+            document.getElementById('lightbox-modal').classList.remove('hidden');
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox-modal').classList.add('hidden');
+        }
+
+        // Upload modal logic
+        function openUploadModal() { document.getElementById('upload-modal').classList.remove('hidden'); }
+        function closeUploadModal() { document.getElementById('upload-modal').classList.add('hidden'); }
+
+        document.getElementById('media-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const type = document.getElementById('media-type').value;
+            const title = document.getElementById('media-title').value;
+            const url = document.getElementById('media-url').value;
+            const embed = document.getElementById('media-embed').value || "dQw4w9WgXcQ";
+            const category = document.getElementById('media-category').value;
+
+            if (type === 'video') {
+                videos.unshift({ id: Date.now(), title, category, views: "Just now", date: "Today", thumbnail: url, embedId: embed });
+                localStorage.setItem('mythoobhai_videos', JSON.stringify(videos));
+                renderVideos('all');
+            } else {
+                photos.unshift({ id: Date.now(), title, url });
+                localStorage.setItem('mythoobhai_photos', JSON.stringify(photos));
+                renderGallery();
+            }
+
+            closeUploadModal();
+            this.reset();
+        });
+
+        // Mobile Nav Toggle
+        function toggleMobileMenu() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        }
+        document.getElementById('mobile-menu-btn').addEventListener('click', toggleMobileMenu);
+
+        // Fan Form Submit
+        document.getElementById('fan-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            document.getElementById('fan-msg-alert').classList.remove('hidden');
+            this.reset();
+            setTimeout(() => { document.getElementById('fan-msg-alert').classList.add('hidden'); }, 4000);
+        });
+
+        // Initialize on load
+        window.onload = function() {
+            renderVideos('all');
+            renderGallery();
+        };
+    </script>
+</body>
+</html>
+```
